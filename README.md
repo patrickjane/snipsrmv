@@ -20,13 +20,6 @@ tbd
 
 # Parameter
 
-rmv_homestation=Hauptwache
-rmv_homecity=Frankfurt
-rmv_homecity_only=True
-
-[secret]
-rmv_api_key=
-
 Die App bentöigt die folgenden Parameter:
 
 - `rmv_homestation`: Home-Station von der aus Verbindungen gesucht werden
