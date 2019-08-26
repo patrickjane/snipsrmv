@@ -1,0 +1,7 @@
+[global]
+rmv_homestation=Hauptwache
+rmv_homecity=Frankfurt
+rmv_homecity_only=False
+
+[secret]
+rmv_api_key=
