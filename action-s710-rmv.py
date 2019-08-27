@@ -93,7 +93,7 @@ class App(object):
         if self.debug:
           print("Connecting to {}@{} ...".format(self.mqtt_user, self.mqtt_host))
 
-        #self.start()
+        self.start()
 
     # -----------------------------------------------------------------------------
     # read_toml
@@ -189,7 +189,7 @@ class App(object):
         return None
 
       try:
-        dict = json.loads(r.content)
+        dict = json.loads(r.content.decode('utf-8'))
       except ValueError as e:
         print("Failed to parse location query response ({})".format(e))
         return None
@@ -223,7 +223,7 @@ class App(object):
         return None
 
       try:
-        dict = json.loads(r.content)
+        dict = json.loads(r.content.decode('utf-8'))
       except ValueError as e:
         print("Failed to parse trip query response ({})".format(e))
         return None
@@ -317,13 +317,12 @@ class App(object):
       if response_message is not None:
         hermes.publish_end_session(intent_message.session_id, response_message)
       else:
-        hermes.publish_end_session(intent_message.session_id, "Tut mir leid, Verbindung konnte leider nicht abgefragt werden")
+        hermes.publish_end_session(intent_message.session_id, "Verbindung konnte nicht abgefragt werden")
 
 # -----------------------------------------------------------------------------
 # main
 # -----------------------------------------------------------------------------
 
 if __name__ == "__main__":
-    app = App(True)
+    app = App()
 
-#    app.query(None, None, "Kruppstraße", None) #"17:30:00")
