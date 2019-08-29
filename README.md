@@ -14,7 +14,7 @@ Nach einigen Tagen erhält man eine E-Mail mit Details, unter anderem den **API-
 
 #### 2) Installation der Snips-App
 
-tbd
+Installation der RMV-App aus dem Store: https://console.snips.ai/store/de/skill_NqB5WgWBnBg
 
 #### 3) Assistant via `sam` installieren/aktualisieren
 
