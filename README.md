@@ -26,6 +26,8 @@ Die App bentöigt die folgenden Parameter:
 - `rmv_homecity`: Heimatstadt
 - `rmv_homecity_only`: Alle Verbindungen werden nur in der Heimatstadt gesucht
 - `rmv_api_key`: Der API-Key (siehe Schritt Installation/1))
+- `time_offset`: Anzahl Minuten die zur aktuellen Zeit addiert werden, wenn die nächste Bahn ohne Zeitangabe abgefragt wird. Es wird dann also eine Verbindung ab "in `time_offset` Minuten" abgefragt. Wenn `time_offset` auf 0 gesetzt wird, wird die aktuelle Uhrzeit verwendet.
+- `short_info`: Bei `short_info=True`: Die Antwort enthält nur eine Kurzinfo bestehend aus erster Bahnverbindung und der Ankunftszeit, also ohne Umsteigeinformationen bzw. Zwischenverbindungen.
 
 # Funktionen
 
