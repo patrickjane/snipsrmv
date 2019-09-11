@@ -106,7 +106,7 @@ class App(object):
 
         self.logger.debug("Connecting to {}@{} ...".format(self.mqtt_user, self.mqtt_host))
 
-        #self.start()
+        self.start()
 
     # -----------------------------------------------------------------------------
     # read_toml
