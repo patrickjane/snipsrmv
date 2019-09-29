@@ -62,7 +62,7 @@ class App(object):
 
         # parameters
 
-        self.mqtt_host = None
+        self.mqtt_host = "localhost:1883"
         self.mqtt_user = None
         self.mqtt_pass = None
 
@@ -154,8 +154,6 @@ class App(object):
         if intent_name == 's710:getTrainTo':
             response = self.query(hermes, intent_message, location, dep_time)
             self.done(hermes, intent_message, response)
-        else:
-            self.logger.error('Unknown intent "{}", ignoring'.format(intent_name))
 
     # -------------------------------------------------------------------------
     # query
